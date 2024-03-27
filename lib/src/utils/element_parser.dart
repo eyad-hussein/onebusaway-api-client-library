@@ -1,5 +1,5 @@
-import 'package:onebusaway_api_client_library/src/enums/element_enum.dart';
-import 'package:onebusaway_api_client_library/src/enums/reference_element_enum.dart';
+import 'package:onebusaway_api_client_library/src/enums/element_type_enum.dart';
+import 'package:onebusaway_api_client_library/src/enums/reference_element_type_enum.dart';
 import 'package:onebusaway_api_client_library/src/models/agency_model.dart';
 import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 // yet to be completed

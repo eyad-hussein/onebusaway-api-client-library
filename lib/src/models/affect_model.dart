@@ -1,6 +1,6 @@
 import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 import 'package:onebusaway_api_client_library/src/models/stop_model.dart';
-import 'package:onebusaway_api_client_library/src/models/vehicle_journey_model.dart';
+import 'package:onebusaway_api_client_library/src/models/vehicle/vehicle_journey_model.dart';
 
 class AffectModel extends ElementModel {
   final List<StopModel> stops;
