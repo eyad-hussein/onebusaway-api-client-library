@@ -1,1 +1,0 @@
-enum DataTypes { entryWithReferences, listWithReferences }
