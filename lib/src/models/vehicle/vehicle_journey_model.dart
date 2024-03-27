@@ -1,6 +1,7 @@
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 import 'package:onebusaway_api_client_library/src/models/stop_model.dart';
 
-class VehicleJourneyModel {
+class VehicleJourneyModel extends ElementModel {
   final String lineId;
   String? direction;
   List<StopModel>? calls;

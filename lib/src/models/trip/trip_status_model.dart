@@ -1,7 +1,8 @@
 import 'package:onebusaway_api_client_library/src/models/frequency_model.dart';
 import 'package:onebusaway_api_client_library/src/models/position_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 
-class TripStatus {
+class TripStatusModel extends ElementModel {
   final String activeTripId;
   final int blockTripSequence;
   final int serviceDate;
@@ -28,7 +29,7 @@ class TripStatus {
   final String? vehicleId;
   final List<String> situationIds;
 
-  TripStatus({
+  TripStatusModel({
     required this.activeTripId,
     required this.blockTripSequence,
     required this.serviceDate,
@@ -56,8 +57,8 @@ class TripStatus {
     this.nextStopTimeOffset,
   });
 
-  factory TripStatus.fromJson(Map<String, dynamic> json) {
-    return TripStatus(
+  factory TripStatusModel.fromJson(Map<String, dynamic> json) {
+    return TripStatusModel(
       activeTripId: json['activeTripId'] as String,
       blockTripSequence: json['blockTripSequence'] as int,
       serviceDate: json['serviceDate'] as int,
@@ -75,11 +76,11 @@ class TripStatus {
       situationIds: List<String>.from(json['situationIds'] as List),
       scheduledDistanceAlongTrip: json['scheduledDistanceAlongTrip'] as double?,
       position: json['position'] != null
-          ? PositionModel.fromJSON(json['position'])
+          ? PositionModel.fromJson(json['position'])
           : null,
       orientation: json['orientation'] as double?,
       lastKnownLocation: json['lastKnownLocation'] != null
-          ? PositionModel.fromJSON(json['lastKnownLocation'])
+          ? PositionModel.fromJson(json['lastKnownLocation'])
           : null,
       lastKnownDistanceAlongTrip: json['lastKnownDistanceAlongTrip'] as double?,
       lastKnownOrientation: json['lastKnownOrientation'] as double?,

@@ -1,6 +1,7 @@
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 import 'package:onebusaway_api_client_library/src/models/stop_time_model.dart';
 
-class BlockStopTimeModel {
+class BlockStopTimeModel extends ElementModel {
   final int blockSequence;
   final double distanceAlongBlock;
   final double accumulatedSlackTime;

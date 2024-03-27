@@ -3,7 +3,7 @@ import 'package:onebusaway_api_client_library/src/models/shared/element_model.da
 class AgencyModel extends ElementModel {
   final String id;
   final String name;
-  final Uri url;
+  final String url;
   final String timezone;
   final String? lang;
   final String? phone;
@@ -23,7 +23,7 @@ class AgencyModel extends ElementModel {
     return AgencyModel(
       id: json['id'] as String,
       name: json['name'] as String,
-      url: json['url'] as Uri,
+      url: json['url'] as String,
       timezone: json['timezone'] as String,
       lang: json['lang'] as String?,
       phone: json['phone'] as String?,

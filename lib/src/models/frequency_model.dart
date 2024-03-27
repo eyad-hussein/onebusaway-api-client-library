@@ -1,4 +1,6 @@
-class FrequencyModel {
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
+
+class FrequencyModel extends ElementModel {
   final int startTime;
   final int endTime;
   final int headway;
@@ -9,7 +11,7 @@ class FrequencyModel {
     required this.headway,
   });
 
-  factory FrequencyModel.fromJSON(Map<String, dynamic> json) {
+  factory FrequencyModel.fromJson(Map<String, dynamic> json) {
     return FrequencyModel(
         startTime: json['startTime'] as int,
         endTime: json['endTime'] as int,

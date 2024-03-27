@@ -1,8 +1,9 @@
 import 'package:onebusaway_api_client_library/src/enums/situation_reason_enum.dart';
 import 'package:onebusaway_api_client_library/src/models/affect_model.dart';
 import 'package:onebusaway_api_client_library/src/models/consequence_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 
-class SituationModel {
+class SituationModel extends ElementModel {
   final String id;
   final int creationTime;
   final SituationReason reason;

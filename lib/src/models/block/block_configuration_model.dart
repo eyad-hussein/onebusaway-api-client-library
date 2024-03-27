@@ -1,6 +1,7 @@
-import 'package:onebusaway_api_client_library/src/models/block_trip_model.dart';
+import 'package:onebusaway_api_client_library/src/models/block/block_trip_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 
-class BlockConfigurationModel {
+class BlockConfigurationModel extends ElementModel {
   final List<String> activeServiceIds;
   final List<String> inactiveServiceIds;
   final List<BlockTripModel> trips;

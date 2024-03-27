@@ -1,4 +1,6 @@
-class TripModel {
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
+
+class TripModel extends ElementModel {
   final String id;
   final String routeId;
   final String serviceId;

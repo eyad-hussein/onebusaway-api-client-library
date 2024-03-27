@@ -1,6 +1,7 @@
-import 'package:onebusaway_api_client_library/src/models/block_stop_time_model.dart';
+import 'package:onebusaway_api_client_library/src/models/block/block_stop_time_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 
-class BlockTripModel {
+class BlockTripModel extends ElementModel {
   final String tripId;
   final List<BlockStopTimeModel> blockStopTimes;
   final double accumulatedSlackTime;

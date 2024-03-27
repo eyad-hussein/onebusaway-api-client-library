@@ -1,4 +1,6 @@
-class StopTimeModel {
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
+
+class StopTimeModel extends ElementModel {
   final String stopId;
   final int arrivalTime;
   final int departureTime;

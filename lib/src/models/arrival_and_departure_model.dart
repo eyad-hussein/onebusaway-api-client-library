@@ -1,7 +1,8 @@
 import 'package:onebusaway_api_client_library/src/models/frequency_model.dart';
-import 'package:onebusaway_api_client_library/src/models/trip_status_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
+import 'package:onebusaway_api_client_library/src/models/trip/trip_status_model.dart';
 
-class ArrivalAndDepartureModel {
+class ArrivalAndDepartureModel extends ElementModel {
   final String routeId;
   final String tripId;
   final int serviceDate;
@@ -22,7 +23,7 @@ class ArrivalAndDepartureModel {
   final int predictedDepartureTime;
   final double distanceFromStop;
   final int numberOfStopsAway;
-  final TripStatus? tripStatus;
+  final TripStatusModel? tripStatus;
 
   ArrivalAndDepartureModel({
     required this.routeId,
@@ -64,14 +65,14 @@ class ArrivalAndDepartureModel {
       departureEnabled: json['departureEnabled'] as bool,
       scheduledArrivalTime: json['scheduledArrivalTime'] as int,
       scheduledDepartureTime: json['scheduledDepartureTime'] as int,
-      frequency: FrequencyModel.fromJSON(json['frequency']) as FrequencyModel?,
+      frequency: FrequencyModel.fromJson(json['frequency']) as FrequencyModel?,
       predicted: json['predicted'] as bool,
       predictedArrivalTime: json['predictedArrivalTime'] as int,
       predictedDepartureTime: json['predictedDepartureTime'] as int,
       distanceFromStop: json['distanceFromStop'] as double,
       numberOfStopsAway: json['numberOfStopsAway'] as int,
       tripStatus: json['tripStatus'] != null
-          ? TripStatus.fromJson(json['tripStatus'])
+          ? TripStatusModel.fromJson(json['tripStatus'])
           : null,
     );
   }

@@ -1,10 +1,11 @@
 import 'package:onebusaway_api_client_library/src/enums/consequence_condition_enum.dart';
-import 'package:onebusaway_api_client_library/src/models/condition/condition_details.dart';
+import 'package:onebusaway_api_client_library/src/models/condition/condition_details_model.dart';
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
 import 'package:onebusaway_api_client_library/src/utils/consequence_condition_parser.dart';
 
-class ConditionModel {
+class ConditionModel extends ElementModel {
   final ConseuquenceCondition condition;
-  final ConditionDetails? conditionDetails;
+  final ConditionDetailsModel? conditionDetails;
 
   ConditionModel({
     required this.condition,

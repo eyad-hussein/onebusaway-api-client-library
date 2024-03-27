@@ -1,4 +1,6 @@
-class CallModel {
+import 'package:onebusaway_api_client_library/src/models/shared/element_model.dart';
+
+class CallModel extends ElementModel {
   final String stopId;
 
   CallModel({
